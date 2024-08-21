@@ -43,6 +43,7 @@ import { ojMessage } from 'ojs/ojmessage';
 import 'ojs/ojmessages';
 import 'ojs/ojknockout';
 import 'ojs/ojselectsingle';
+import 'ojs/ojdatetimepicker';
 import { ojButton } from 'ojs/ojbutton';
 
 class AboutViewModel {
