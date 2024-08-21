@@ -1,0 +1,50 @@
+<style>
+  .center-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+<div class="oj-hybrid-padding">
+  <oj-c-form-layout id="form1"  label-edge="inside" colspan-wrap="[[colspanWrap]]" max-columns="1" direction="column">
+    <oj-c-input-text id="text-input" raw-value="{{username}}" label-hint="Enter Username" label-edge="inside">
+    </oj-c-input-text>
+
+    <oj-c-input-password id="enabled1" value="" label-hint="Enter Password" label-edge="inside">
+    </oj-c-input-password>
+
+    <oj-c-input-date-text label-hint="Enter birthdate" id="date" class="oj-form-control-max-width-md" value="{{value}}">
+    </oj-c-input-date-text>
+
+    
+
+  <div class="full-width">
+    <oj-radioset id="enabledRadioset" value="gender" label-hint="Select gender">
+      <oj-option value="desktop">Female</oj-option>
+      <oj-option value="laptop">Male</oj-option>
+      <oj-option value="tablet">Other</oj-option>
+    </oj-radioset>
+  </div>
+
+  <div class="full-width">
+    <oj-checkboxset id="enabledCheckboxset" value='["aadhar"]' label-hint="Select documents">
+      <oj-option value="aadhar">Aadhar</oj-option>
+      <oj-option value="pan">PAN</oj-option>
+      <oj-option value="driving">Driving License</oj-option>
+    </oj-checkboxset>
+  </div>
+    
+
+    <oj-messages class="oj-color-invert" messages="[[messagesDataprovider]]" position="{}" display="notification"
+      display-options.category="none">
+    </oj-messages>
+
+    <oj-select-single id="select1" label-hint="Select state" label-edge="inside"
+      class="oj-form-control-max-width-md" data="[[countriesDP]]" value="{{selectVal}}"></oj-select-single>
+
+      <oj-c-progress-bar class="oj-sm-margin-4x-bottom demo-width" id="progressBar" aria-labelledby="detLabel"
+      value="[[progressValue]]"></oj-c-progress-bar>
+
+    <oj-button id="helloButton" on-oj-action="[[showHelloWorld]]">Click Me</oj-button>
+  </oj-c-form-layout>
+</div>
