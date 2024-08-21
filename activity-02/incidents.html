@@ -1,0 +1,39 @@
+<div class="oj-hybrid-padding">
+  <h1>Users information</h1>
+  <div id="mainContent">
+    <oj-table
+      id="table"
+      aria-label="Users Table"
+      data="[[dataprovider]]"
+      columns-default='{"sortable": "disabled"}'
+      columns='[{"headerText": "User ID", "field": "id", "id": "id"},
+                {"headerText": "Name", "field": "name", "id": "name"},
+                {"headerText": "Phone No", "field": "phone", "id": "phone"},
+                {"headerText": "DOB", "field": "dob", "id": "dob"}]'
+      class="demo-table-container"></oj-table>
+  </div>
+
+  <div>
+  <h1>Fetch or delete user records</h1>
+  <div>
+    <label for="userIdInput">User ID:</label>
+    <input id="userIdInput" type="text" data-bind="value: userId, valueUpdate: 'input'" />
+    <button data-bind="click: fetchUser">Fetch</button>
+    <button data-bind="click: deleteUser">Delete</button>
+  </div>
+
+  <div data-bind="if: fetchMessage">
+    <p data-bind="text: fetchMessage" style="color: red;"></p>
+  </div>
+  <div data-bind="if: errorMessage">
+    <p data-bind="text: errorMessage" style="color: red;"></p>
+</div>
+
+  <div data-bind="if: user">
+    <h3>User Details</h3>
+    <p><strong>Name:</strong> <span data-bind="text: user().name"></span></p>
+    <p><strong>Phone:</strong> <span data-bind="text: user().phone"></span></p>
+    <p><strong>DOB:</strong> <span data-bind="text: user().dob"></span></p>
+  </div>
+  </div>
+</div>
